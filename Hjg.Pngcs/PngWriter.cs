@@ -478,8 +478,10 @@ namespace Hjg.Pngcs {
                 datStream.Close();
                 WriteLastChunks();
                 WriteEndChunk();
-                if (this.ShouldCloseStream)
-                    outputStream.Close();
+                if(this.ShouldCloseStream)
+                {
+                    outputStream.Dispose();
+                }
             } catch (IOException e) {
                 throw new PngjOutputException(e);
             }
