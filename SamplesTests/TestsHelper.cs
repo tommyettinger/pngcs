@@ -8,7 +8,7 @@ namespace SamplesTests {
 
     public class TestsHelper {
 
-        static string tempDir  = "C:/temp";
+        static string tempDir  = "temp";
 
         public static void testEqual(String image1, String image2) {
             PngReader png1 = FileHelper.CreatePngReader(image1);

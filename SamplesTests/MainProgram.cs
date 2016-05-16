@@ -12,6 +12,8 @@ namespace SamplesTests {
         static void Main(string[] args) {
             long t0=Environment.TickCount;
             //testX();
+            System.IO.Directory.CreateDirectory("temp");
+            System.IO.Directory.CreateDirectory("testcs");
             myTestSuite();
             //testTextChunks();
             long t1 = Environment.TickCount;
@@ -20,13 +22,8 @@ namespace SamplesTests {
             Console.In.ReadLine();
         }
 
-        static void testX() { // placeholder method for misc tests
-            PngReader png=FileHelper.CreatePngReader("C:/temp/map.png");
-            Console.Out.WriteLine(png);
-        }
-
         static void myTestSuite() {
-            testSuite(new string[] { "d:/devel/repositories/pnjgs/pnjg/resources/testsuite1/", "D:/temp/testcs" });
+            testSuite(new string[] { "testsuite1/", "testcs/", "20"});
         }
 
         /// <summary>
