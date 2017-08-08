@@ -99,7 +99,6 @@ namespace Hjg.Pngcs.Zlib {
         {
             return "Zlib inflater: .Net CLR 4.5";
         }
-#endif
-
     }
+#endif
 }

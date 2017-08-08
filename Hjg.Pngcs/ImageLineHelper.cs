@@ -73,11 +73,16 @@ namespace Hjg.Pngcs
 
         public static int ToARGB8(int[] buff, int offset, bool alpha)
         {
-            return alpha ? ToARGB8(buff[offset++], buff[offset++], buff[offset++], buff[offset]) : ToARGB8(buff[offset++], buff[offset++], buff[offset]);
+            return alpha
+                ? ToARGB8(buff[offset++], buff[offset++], buff[offset++], buff[offset])
+                : ToARGB8(buff[offset++], buff[offset++], buff[offset]);
         }
 
-        public static int ToARGB8(byte[] buff, int offset, bool alpha) {
-            return alpha ? ToARGB8(buff[offset++], buff[offset++], buff[offset++], buff[offset]) : ToARGB8(buff[offset++], buff[offset++], buff[offset]);
+        public static int ToARGB8(byte[] buff, int offset, bool alpha)
+        {
+            return alpha
+                ? ToARGB8(buff[offset++], buff[offset++], buff[offset++], buff[offset])
+                : ToARGB8(buff[offset++], buff[offset++], buff[offset]);
         }
 
         public static void FromARGB8(int val, int[] buff, int offset, bool alpha)

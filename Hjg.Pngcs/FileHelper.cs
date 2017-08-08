@@ -24,7 +24,7 @@ namespace Hjg.Pngcs {
             Stream osx = null;
             if (File.Exists(file) && !allowOverwrite)
                 throw new PngjOutputException("File already exists (" + file + ") and overwrite=false");
-            osx = new FileStream(file, FileMode.OpenOrCreate);
+            osx = new FileStream(file, FileMode.Create);
             return osx;
         }
 

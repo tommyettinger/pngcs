@@ -10,6 +10,7 @@ namespace SamplesTests {
     class MainProgram {
         
         static void Main(string[] args) {
+            Console.WriteLine("Starting all tests...");
             long t0=Environment.TickCount;
             //testX();
             System.IO.Directory.CreateDirectory("temp");
